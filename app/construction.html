@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+/>
+
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.min.css" />
+
+
+    <title>Zemlya Bel</title>
+  </head>
+
+  <body>
+    <div class="popup popup--viewing">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">ЗАЯВКА НА ПРОСМОТР</h2>
+      <div class="popup__text">
+        <p>
+          Если Вы хотите посмотреть понравившийся участок, заполните эту форму.
+          С Вами свяжется представитель компании, с которым Вы сможете
+          договориться о времени просмотра.
+        </p>
+      </div>
+
+      <form class="popup__form form-submit">
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            name="name"
+            id="viewing-name"
+            type="text"
+            placeholder="Введите Ваше имя"
+            required
+          />
+        </label>
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            name="name"
+            id="viewing-tel"
+            type="tel"
+            placeholder="Контактный телефон"
+            required
+          />
+        </label>
+
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" required />
+          <span class="checkbox__box"></span>
+          <span class="checkbox__text">
+            Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+          </span>
+        </label>
+
+        <button class="form-submit__btn btn" type="button">
+          ОТПРАВИТЬ ЗАЯВКУ
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--reservation">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">ЗАБРОНИРОВАТЬ УЧАСТОК</h2>
+      <div class="popup__text">
+        <p>
+          Если Вы хотите забронировать понравившийся участок, заполните эту
+          форму.
+        </p>
+      </div>
+
+      <form class="popup__form form-submit">
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            name="name"
+            id="reservation-number"
+            type="text"
+            placeholder="Введите номер участка"
+            required
+          />
+        </label>
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            name="name"
+            id="reservation-name"
+            type="text"
+            placeholder="Введите Ваше имя"
+            required
+          />
+        </label>
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            name="name"
+            id="reservation-tel"
+            type="tel"
+            placeholder="Контактный телефон"
+            required
+          />
+        </label>
+
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" required />
+          <span class="checkbox__box"></span>
+          <span class="checkbox__text">
+            Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+          </span>
+        </label>
+
+        <button class="form-submit__btn btn" type="button">
+          ОТПРАВИТЬ ЗАЯВКУ
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <h1 class="visually-hidden">Строительство</h1>
+
+    <div class="site-wrapper">
+      <header class="header header--color-dark">
+  <!-- * Mobile Menu -->
+  <div class="overlay"></div>
+
+  <div class="mobile-menu">
+    <a class="mobile-menu__logo logo" href="#">
+      <img src="images/logo.png" alt="Логотип" />
+    </a>
+
+    <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+      <svg width="19" height="19">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu__body">
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Все поселки
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">ИЖС Новая гвоздна</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">ИЖС Озерный</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Рассрочка и кредит</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">О компании</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Контакты</a>
+      </li>
+    </ul>
+  </div>
+  <!-- * Mobile Menu -->
+
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-inner">
+        <div class="header__left">
+          <a class="header__logo logo" href="#">
+            <img src="images/logo.png" alt="Логотип" />
+          </a>
+
+          <div class="header__actions actions">
+            <a class="actions__phone" href="tel:+79257775707">
+              +7 (925) 777-57-07
+            </a>
+            <button class="actions__order-btn">заказать звонок</button>
+          </div>
+        </div>
+
+        <div class="header__right">
+          <div class="header__menu main-menu">
+            <ul class="main-menu__list">
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Строительство</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Земельные активы</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Карта поселков</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="header__tools">
+            <a class="header__favorites" href="#" aria-label="Избранное"></a>
+            <button class="header__btn btn" type="button">Войти</button>
+
+            <button
+              class="header__toggle"
+              type="button"
+              aria-label="Открыть меню"
+            >
+              <span class="header__toggle-line"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-inner">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link menu__link--dropdown" href="#">
+                Все поселки
+              </a>
+
+              <div class="dropmenu">
+                <ul class="dropmenu__list">
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">ИЖС Новая гвоздна</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">ИЖС Озерный</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Рассрочка и кредит</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">О компании</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a class="header__search" href="#" aria-label="Поиск"></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+      <div class="breadcrumbs breadcrumbs--absolute">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link--active">
+                 Строительство
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="main mt">
+        <section
+  class="hero hero--construction"
+  style="background-image: url('images/content/hero-construction.jpg')"
+>
+  <!-- <div class="container"> -->
+    <div class="hero__wrapper">
+      <div class="hero__offer">
+        <h2 class="hero__title">Строительство</h2>
+        <div class="hero__text">
+          <p>
+            Наша компания предлагает взаимовыгодное сотрудничество и готова
+            стать Вашим надежным партнером на пути к реализации Вашей мечты.
+          </p>
+        </div>
+
+        <button class="hero__btn btn" type="button">ОСТАВИТЬ ЗАЯВКУ</button>
+      </div>
+    </div>
+  <!-- </div> -->
+</section>
+
+        <div class="container">
+          <div class="construction-text">
+            <p>
+              Наш богатый и разносторонний опыт выполнения строительных работ
+              позволяет реализовать любые желания Заказчика, а комплексный
+              подход позволит разработать и внедрить оптимальные инженерные
+              решения с применением новейших технологий строительства.
+            </p>
+          </div>
+        </div>
+        <section class="projects">
+  <div class="container">
+    <h2 class="projects__title">Наши проекты</h2>
+
+    <ul class="projects__list">
+      <li class="projects__item">
+        <article class="projects-card">
+          <div class="projects-card__top">
+            <img src="images/content/projects/1.jpg" alt="Проект" />
+          </div>
+
+          <div class="projects-card__body">
+            <h3 class="projects-card__title">
+              Одноэтажный дом с гостиной со вторым светом и камином
+            </h3>
+
+            <ul class="projects-card__list">
+              <li class="projects-card__item">
+                <div class="projects-card__left">Ширина x Длина, м</div>
+                <div class="projects-card__right">11 x 12</div>
+              </li>
+              <li class="projects-card__item">
+                <div class="projects-card__left">Общая площадь, м2</div>
+                <div class="projects-card__right">90,87 м2</div>
+              </li>
+            </ul>
+
+            <div class="projects-card__bottom">
+              <a class="projects-card__btn btn" href="#">Подробнее</a>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li class="projects__item">
+        <article class="projects-card">
+          <div class="projects-card__top">
+            <img src="images/content/projects/2.jpg" alt="Проект" />
+          </div>
+
+          <div class="projects-card__body">
+            <h3 class="projects-card__title">
+              Двухэтажный жилой дом со спортзалом
+            </h3>
+
+            <ul class="projects-card__list">
+              <li class="projects-card__item">
+                <div class="projects-card__left">Ширина x Длина, м</div>
+                <div class="projects-card__right">11 x 12</div>
+              </li>
+              <li class="projects-card__item">
+                <div class="projects-card__left">Общая площадь, м2</div>
+                <div class="projects-card__right">90,87 м2</div>
+              </li>
+            </ul>
+
+            <div class="projects-card__bottom">
+              <a class="projects-card__btn btn" href="#">Подробнее</a>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li class="projects__item">
+        <article class="projects-card">
+          <div class="projects-card__top">
+            <img src="images/content/projects/3.jpg" alt="Проект" />
+          </div>
+
+          <div class="projects-card__body">
+            <h3 class="projects-card__title">
+              Одноэтажный дом с тремя спальнями и террасой
+            </h3>
+
+            <ul class="projects-card__list">
+              <li class="projects-card__item">
+                <div class="projects-card__left">Ширина x Длина, м</div>
+                <div class="projects-card__right">11 x 12</div>
+              </li>
+              <li class="projects-card__item">
+                <div class="projects-card__left">Общая площадь, м2</div>
+                <div class="projects-card__right">90,87 м2</div>
+              </li>
+            </ul>
+
+            <div class="projects-card__bottom">
+              <a class="projects-card__btn btn" href="#">Подробнее</a>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li class="projects__item">
+        <article class="projects-card">
+          <div class="projects-card__top">
+            <img src="images/content/projects/4.jpg" alt="Проект" />
+          </div>
+
+          <div class="projects-card__body">
+            <h3 class="projects-card__title">
+              Одноэтажный дом с тремя спальнями
+            </h3>
+
+            <ul class="projects-card__list">
+              <li class="projects-card__item">
+                <div class="projects-card__left">Ширина x Длина, м</div>
+                <div class="projects-card__right">11 x 12</div>
+              </li>
+              <li class="projects-card__item">
+                <div class="projects-card__left">Общая площадь, м2</div>
+                <div class="projects-card__right">90,87 м2</div>
+              </li>
+            </ul>
+
+            <div class="projects-card__bottom">
+              <a class="projects-card__btn btn" href="#">Подробнее</a>
+            </div>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+
+        <section class="request">
+  <div class="container">
+    <div class="request__wrapper">
+      <div
+        class="request__preview"
+        style="background-image: url('images/content/request-bg.png')"
+      ></div>
+
+      <div class="request__offer">
+        <h2 class="request__title">Заявка на строительство</h2>
+        <p class="request__text">
+          Оставьте заявку и мы свяжемся с Вами в ближайшее время
+        </p>
+
+        <form class="form-submit">
+          <div class="form-submit__group">
+            <input
+              class="form-submit__input"
+              id="name"
+              type="text"
+              placeholder="Введите ваше имя"
+            />
+
+            <label class="form-submit__label" for="name">Имя</label>
+          </div>
+          <div class="form-submit__group">
+            <input
+              class="form-submit__input"
+              id="tel"
+              type="tel"
+              placeholder=" +7 (___) ___ - __ - __"
+            />
+            <label class="form-submit__label" for="tel">Телефон</label>
+          </div>
+
+          <div class="form-submit__group">
+            <textarea
+              class="form-submit__input form-submit__input--textarea"
+              id="message"
+              placeholder="Введите Ваше сообщение"
+            ></textarea>
+            <label class="form-submit__label" for="message">Сообщение</label>
+          </div>
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" required />
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text">
+              Согласен на <a href="#">обработку персональных данных</a>
+            </span>
+          </label>
+
+          <button class="form-submit__btn btn" type="button">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="news">
+  <div class="container">
+    <div class="news__wrapper">
+      <div class="news__offer">
+        <h2 class="news__title">Новости</h2>
+
+        <button class="news__btn btn btn--transparent">Все новости</button>
+      </div>
+
+      <ul class="news__list">
+        <li class="news__item">
+          <article class="news-card">
+            <a class="news-card__link" href="#"></a>
+            <div class="news-card__top">
+              <img src="images/content/news/1.jpg" alt="Новость" />
+            </div>
+
+            <div class="news-card__body">
+              <p class="news-card__time">15.03.2022</p>
+
+              <h3 class="news-card__title">
+                Дачи и участки без подряда - лидеры продаж
+              </h3>
+            </div>
+          </article>
+        </li>
+        <li class="news__item">
+          <article class="news-card">
+            <a class="news-card__link" href="#"></a>
+            <div class="news-card__top">
+              <img src="images/content/news/2.jpg" alt="Новость" />
+            </div>
+
+            <div class="news-card__body">
+              <p class="news-card__time">15.03.2022</p>
+
+              <h3 class="news-card__title">
+                Поселок Фиалкино - отличный способ сохранить сбережения
+              </h3>
+            </div>
+          </article>
+        </li>
+        <li class="news__item">
+          <article class="news-card">
+            <a class="news-card__link" href="#"></a>
+            <div class="news-card__top">
+              <img src="images/content/news/3.jpg" alt="Новость" />
+            </div>
+
+            <div class="news-card__body">
+              <p class="news-card__time">15.03.2022</p>
+
+              <h3 class="news-card__title">
+                Поселки для ИЖС от нашей компании: выгодно и надежно
+              </h3>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <a class="footer__logo logo" href="#">
+        <img src="images/logo.png" alt="Логотип" />
+      </a>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <span class="footer__heading">КОМПАНИЯ</span>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link"> История компании </a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link"> Наша команда </a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link"> Отзывы </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <span class="footer__heading">СПЕЦПРЕДЛОЖЕНИЯ</span>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Акции </a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Рассрочка и кредит</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link"> Строительство</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <span class="footer__heading">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</span>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Новости</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Обустройство</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Реализованые поселки</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__col footer__col--contacts">
+        <div class="footer__actions actions">
+          <a class="actions__phone" href="tel:+79257775707">
+            +7 (925) 777-57-07
+          </a>
+          <button class="actions__order-btn">заказать звонок</button>
+        </div>
+        <div class="footer__socials socials">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a
+                class="socials__link socials__link--vk"
+                href="#"
+                aria-label="vk"
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a
+                class="socials__link socials__link--youtube"
+                href="#"
+                aria-label="youtube"
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a
+                class="socials__link socials__link--odnoklassniki"
+                href="#"
+                aria-label="odnoklassniki"
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a
+                class="socials__link socials__link--telegram"
+                href="#"
+                aria-label="telegram"
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>
+        © Все права защищены. Публикуемая на сайте информация не является
+        публичной офертой
+      </p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
+  integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+<!--  -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+<!-- wNumb -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>

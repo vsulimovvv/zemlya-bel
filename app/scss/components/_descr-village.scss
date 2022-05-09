@@ -1,0 +1,123 @@
+.descr-village {
+  @include adaptive-value('padding-top', 50, 30, 1);
+  @include adaptive-value('padding-bottom', 80, 40, 1);
+
+  &__top {
+    margin: 0 auto;
+    max-width: 700px;
+    width: 100%;
+
+    margin-bottom: 150px;
+
+    @include breakpointsMaxW($bp-768) {
+      margin-bottom: 170px;
+    }
+  }
+  &__title {
+    @include adaptive-value('margin-bottom', 40, 30, 1);
+    @include fz40();
+  }
+
+  &__text {
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.descr-tabs {
+  position: relative;
+
+  &__top {
+    background-color: var(--color-white);
+    box-shadow: 0px 9px 35px 0px rgba(17, 17, 17, 0.17);
+    border-radius: 10px;
+    padding: 30px;
+    position: absolute;
+    top: -50px;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    z-index: 2;
+
+    @include breakpointsMaxW($bp-768) {
+      padding: 20px 10px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 20px;
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+
+  &__btn {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #132134;
+    border-radius: 10px;
+    transition: 200ms ease;
+
+    @include adaptive-value('font-size', 20, 16, 1);
+
+    @include breakpointsMaxW($bp-360) {
+      padding: 7px 15px;
+    }
+
+    &:hover {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+    }
+
+    &.tabs-btn--active {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+    }
+  }
+
+  &__content {
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    border-radius: 10px;
+    @include adaptive-value('height', 535, 300, 1);
+    @include breakpointsMaxW($bp-768) {
+      width: 100%;
+    }
+
+    img {
+      border-radius: 10px;
+      @include img(cover);
+    }
+  }
+
+  &__wrap {
+    @include adaptive-value('margin-bottom', 70, 40, 1);
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+@include breakpointsMaxW($bp-768){
+  flex-direction: column;
+  align-items: center;
+}
+  }
+
+  &__button {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 20px;
+    width: 250px;
+  }
+}

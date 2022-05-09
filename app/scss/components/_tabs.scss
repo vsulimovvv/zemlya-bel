@@ -1,0 +1,8 @@
+.tabs-content {
+  display: none;
+
+  &.active {
+    display: block;
+    animation: opacity-visibility 700ms ease forwards;
+  }
+}

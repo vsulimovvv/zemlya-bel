@@ -1,0 +1,58 @@
+<section class="request">
+  <div class="container">
+    <div class="request__wrapper">
+      <div
+        class="request__preview"
+        style="background-image: url('images/content/request-bg.png')"
+      ></div>
+
+      <div class="request__offer">
+        <h2 class="request__title">Заявка на строительство</h2>
+        <p class="request__text">
+          Оставьте заявку и мы свяжемся с Вами в ближайшее время
+        </p>
+
+        <form class="form-submit">
+          <div class="form-submit__group">
+            <input
+              class="form-submit__input"
+              id="name"
+              type="text"
+              placeholder="Введите ваше имя"
+            />
+
+            <label class="form-submit__label" for="name">Имя</label>
+          </div>
+          <div class="form-submit__group">
+            <input
+              class="form-submit__input"
+              id="tel"
+              type="tel"
+              placeholder=" +7 (___) ___ - __ - __"
+            />
+            <label class="form-submit__label" for="tel">Телефон</label>
+          </div>
+
+          <div class="form-submit__group">
+            <textarea
+              class="form-submit__input form-submit__input--textarea"
+              id="message"
+              placeholder="Введите Ваше сообщение"
+            ></textarea>
+            <label class="form-submit__label" for="message">Сообщение</label>
+          </div>
+
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" required />
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text">
+              Согласен на <a href="#">обработку персональных данных</a>
+            </span>
+          </label>
+
+          <button class="form-submit__btn btn" type="button">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

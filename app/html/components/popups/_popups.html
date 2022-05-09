@@ -1,0 +1,118 @@
+<div class="popup popup--viewing">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">ЗАЯВКА НА ПРОСМОТР</h2>
+      <div class="popup__text">
+        <p>
+          Если Вы хотите посмотреть понравившийся участок, заполните эту форму.
+          С Вами свяжется представитель компании, с которым Вы сможете
+          договориться о времени просмотра.
+        </p>
+      </div>
+
+      <form class="popup__form form-submit">
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            name="name"
+            id="viewing-name"
+            type="text"
+            placeholder="Введите Ваше имя"
+            required
+          />
+        </label>
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            name="name"
+            id="viewing-tel"
+            type="tel"
+            placeholder="Контактный телефон"
+            required
+          />
+        </label>
+
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" required />
+          <span class="checkbox__box"></span>
+          <span class="checkbox__text">
+            Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+          </span>
+        </label>
+
+        <button class="form-submit__btn btn" type="button">
+          ОТПРАВИТЬ ЗАЯВКУ
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--reservation">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">ЗАБРОНИРОВАТЬ УЧАСТОК</h2>
+      <div class="popup__text">
+        <p>
+          Если Вы хотите забронировать понравившийся участок, заполните эту
+          форму.
+        </p>
+      </div>
+
+      <form class="popup__form form-submit">
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            name="name"
+            id="reservation-number"
+            type="text"
+            placeholder="Введите номер участка"
+            required
+          />
+        </label>
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            name="name"
+            id="reservation-name"
+            type="text"
+            placeholder="Введите Ваше имя"
+            required
+          />
+        </label>
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            name="name"
+            id="reservation-tel"
+            type="tel"
+            placeholder="Контактный телефон"
+            required
+          />
+        </label>
+
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" required />
+          <span class="checkbox__box"></span>
+          <span class="checkbox__text">
+            Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+          </span>
+        </label>
+
+        <button class="form-submit__btn btn" type="button">
+          ОТПРАВИТЬ ЗАЯВКУ
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+@import 'libs';
+@import 'reset';
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'global';
+
+@import './animations';
+
+// * ===== Other components
+@import './components/breadcrumbs';
+@import './components/swiper-options';
+@import './components/custom-checkbox';
+@import './components/custom-select';
+@import './components/popups';
+@import './components/form-submit';
+@import './components/socials';
+@import './components/main-menu';
+@import './components/menu';
+@import './components/menu-mobile';
+@import './components/accordion';
+
+// * ===== Card Components
+
+// * ===== Section Components
+@import './components/footer';
+@import './components/header';
+@import './components/hero';
+@import './components/contacts';
+@import './components/numbers';
+@import './components/questions';
+@import './components/advantages';
+@import './components/plots';
+@import './components/special';
+@import './components/news';
+@import './components/photos';
+@import './components/benefits';
+@import './components/about';
+@import './components/request';
+@import './components/projects';
+@import './components/assets';
+@import './components/activity';
+@import './components/map';
+@import './components/village-map';
+@import './components/interactive';
+@import './components/descr-village';
+@import './components/product';
+@import './components/solution';
+@import './components/installment';
+
+// @import './components/tabs';

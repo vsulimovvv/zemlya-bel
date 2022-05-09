@@ -1,0 +1,222 @@
+.solution {
+  padding-top: 300px;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__map {
+    border-radius: 20px;
+    height: 570px;
+    width: 100%;
+
+    @include adaptive-value('height', 570, 400, 1);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transform: translateY(-50%);
+
+    img {
+      border-radius: 20px;
+      @include img(cover);
+    }
+
+    .map__pin {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding-top: 50px;
+
+      transform: translate(-50%, -50%);
+      width: 213px;
+      height: 213px;
+      background-color: var(--color-accent);
+      box-shadow: 0px 0px 90px 0px var(--color-accent);
+      color: var(--color-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      font-size: 17px;
+      text-align: center;
+      font-weight: 800;
+
+      &::after {
+        @include elDef();
+        width: 30px;
+        height: 30px;
+        @include maskImage(url('../images/icons/location.svg'), contain);
+        background-color: var(--color-white);
+        top: 55px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0px 18px 0px 0px rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+
+  &__title {
+    @include fz45();
+    text-align: center;
+    color: var(--color-white);
+    @include adaptive-value('margin-bottom', 70, 50, 1);
+  }
+
+  &__bottom {
+    @include adaptive-value('padding-bottom', 80, 40, 1);
+    padding-top: 350px;
+    color: var(--color-white);
+    @include background(cover);
+  }
+
+  .tabs-solution {
+    &__top {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      min-height: 125px;
+      padding: 80px 80px 0 80px;
+      @include adaptive-value('margin-bottom', 80, 40, 1);
+      position: relative;
+
+      @include adaptive-value('padding-left', 80, 20, 1);
+      @include adaptive-value('padding-right', 80, 20, 1);
+
+      &-arrow {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: var(--color-white);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2);
+        transition: 200ms ease;
+
+        &:hover {
+          box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        &:active {
+          box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        &::after {
+          @include elDef();
+          width: 15px;
+          height: 15px;
+          @include maskImage(url('../images/icons/chevron.svg'), contain);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: var(--color-accent);
+        }
+      }
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(6, auto);
+      justify-content: space-between;
+      gap: 30px;
+
+      @include breakpointsMaxW($bp-991) {
+        grid-template-columns: repeat(3, auto);
+      }
+      @include breakpointsMaxW($bp-576) {
+        grid-template-columns: repeat(2, auto);
+        gap: 20px;
+      }
+    }
+
+    &__btn {
+      color: var(--color-white);
+      padding-bottom: 30px;
+      transition: 200ms ease;
+      font-size: 18px;
+      font-weight: 600;
+      position: relative;
+      @include adaptive-value('font-size', 18, 15, 1);
+
+      &::after {
+        @include elDef();
+        background-color: #afc0ff;
+        height: 5px;
+        width: 100%;
+        border-radius: 3px;
+        transform-origin: left;
+        transform: scaleX(0);
+        bottom: 0;
+        left: 0;
+        transition: 200ms ease;
+      }
+
+      &:hover {
+        color: #afc0ff;
+      }
+
+      &--active {
+        color: #afc0ff;
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+
+    &__content {
+      display: none;
+
+      &.active {
+        display: grid;
+        grid-template-columns: minmax(auto, 350px) minmax(auto, 760px);
+        gap: 30px;
+        justify-content: space-between;
+        animation: opacity-visibility 700ms ease forwards;
+
+        @include breakpointsMaxW($bp-991) {
+          grid-template-columns: 1fr;
+          gap: 50px;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 1.2;
+      font-weight: 500;
+      @include adaptive-value('font-size', 36, 24, 1);
+    }
+
+    &__btns {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(auto, 155px));
+      gap: 15px;
+      justify-content: space-between;
+      @include breakpointsMaxW($bp-768) {
+        grid-template-columns: repeat(3, minmax(auto, 155px));
+        justify-content: flex-start;
+      }
+      @include breakpointsMaxW($bp-576) {
+        grid-template-columns: repeat(2, minmax(auto, 155px));
+      }
+    }
+
+    &__button {
+      font-size: 17px;
+      line-height: 1;
+      font-weight: 400;
+      color: #38414e;
+      padding: 17px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      transition: 200ms ease;
+
+      &--active,
+      &:hover {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+      }
+    }
+  }
+}

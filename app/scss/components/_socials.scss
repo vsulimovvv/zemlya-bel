@@ -1,0 +1,58 @@
+.socials {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__link {
+    display: block;
+    width: 37px;
+    height: 37px;
+    background-color: var(--color-accent);
+    border-radius: 10px;
+    position: relative;
+    transition: 200ms ease;
+    border: 2px solid var(--color-accent);
+
+    &:hover {
+      background-color: var(--color-white);
+
+      &::after {
+        background-color: var(--color-accent);
+      }
+    }
+
+    &::after {
+      transition: 200ms ease;
+      @include elDef();
+      width: 18px;
+      height: 18px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--color-white);
+    }
+
+    &--vk {
+      &::after {
+        @include maskImage(url('../images/icons/vk.svg'), contain);
+      }
+    }
+    &--youtube {
+      &::after {
+        @include maskImage(url('../images/icons/youtube.svg'), contain);
+      }
+    }
+    &--odnoklassniki {
+      &::after {
+        @include maskImage(url('../images/icons/odnoklassniki.svg'), contain);
+      }
+    }
+    &--telegram {
+      &::after {
+        @include maskImage(url('../images/icons/telegram.svg'), contain);
+      }
+    }
+  }
+}

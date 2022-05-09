@@ -1,0 +1,85 @@
+.benefits {
+  @include adaptive-value('padding-top', 50, 30, 1);
+  @include adaptive-value('padding-bottom', 50, 30, 1);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 30px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px 30px;
+    }
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 63px;
+    height: 63px;
+    background-color: var(--color-accent);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include breakpointsMaxW($bp-768) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      @include elDef();
+      width: 35px;
+      height: 35px;
+      background-color: var(--color-white);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-left: 80px;
+    font-size: 19px;
+    color: #132134;
+    @include adaptive-value('font-size', 19, 16, 1);
+    @include breakpointsMaxW($bp-768) {
+      padding-left: 0;
+      padding-top: 80px;
+      text-align: center;
+    }
+
+    &--experience {
+      .benefits__icon {
+        &::after {
+          @include maskImage(url('../images/icons/cup-2.svg'), contain);
+        }
+      }
+    }
+    &--projects {
+      .benefits__icon {
+        &::after {
+          @include maskImage(url('../images/icons/land.svg'), contain);
+        }
+      }
+    }
+    &--professionalism {
+      .benefits__icon {
+        &::after {
+          @include maskImage(url('../images/icons/handshake.svg'), contain);
+        }
+      }
+    }
+  }
+}

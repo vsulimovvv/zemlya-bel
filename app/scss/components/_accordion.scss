@@ -1,0 +1,36 @@
+.accordion {
+  padding-left: 1px;
+
+  &.active {
+    .accordion__control {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__control {
+    transition: 150ms ease;
+    position: relative;
+
+    &::after {
+      @include elDef();
+      width: 20px;
+      height: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      @include maskImage(url('../images/icons/chevron.svg'), contain);
+      background-color: var(--color-dark);
+      transition: 250ms ease;
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: 450ms ease-in;
+    z-index: 9;
+  }
+}

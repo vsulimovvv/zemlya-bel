@@ -1,0 +1,139 @@
+<section
+  class="hero"
+  style="background-image: url('images/content/hero-bg.jpg')"
+>
+  <div class="container">
+    <div class="hero__wrapper">
+      <div class="hero__top">
+        <h2 class="hero__title">
+          Продажа земельных участков
+          <span> и строительство домов в Подмосковье </span>
+        </h2>
+
+        <!-- Кастомный клик до блока с поиском -->
+        <button
+          class="hero__arrow"
+          type="button"
+          aria-label="Смотреть ниже"
+        ></button>
+      </div>
+
+      <p class="hero__text">Найти участок</p>
+
+      <form class="hero__search search-box tabs">
+        <div class="search-box__top">
+          <ul class="search-box__top-list">
+            <li class="search-box__top-item">
+              <button
+                class="search-box__top-btn tabs-btn tabs-btn--active"
+                type="button"
+              >
+                Пустые участки
+              </button>
+              <button class="search-box__top-btn tabs-btn" type="button">
+                Участки с домами
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="tabs-content active">
+          <div class="search-box__wrapper">
+            <div class="search-box__group">
+              <label class="search-box__label" for="search">Поиск</label>
+              <input
+                class="search-box__input"
+                type="text"
+                id="search"
+                placeholder="Введите название"
+              />
+            </div>
+            <div class="search-box__group">
+              <label class="search-box__label" for="highway">Шоссе</label>
+              <select class="search-box__input select" id="highway">
+                <option value="">Все шоссе</option>
+                <option value="1">Почти все шоссе</option>
+                <option value="2">Не все шоссе</option>
+                <option value="3">Одно шоссе</option>
+              </select>
+            </div>
+            <div class="search-box__group">
+              <label class="search-box__label" for="district">Район МО</label>
+              <select class="search-box__input select" id="district">
+                <option value="">Все районы МО</option>
+                <option value="1">Почти все районы МО</option>
+                <option value="2">Не все районы МО</option>
+                <option value="3">Один район МО</option>
+              </select>
+            </div>
+            <div class="search-box__group search-box__group--distance">
+              <label class="search-box__label" for="from">Поиск</label>
+              <div class="search-box__inputs">
+                <input
+                  class="search-box__input"
+                  type="text"
+                  id="from"
+                  placeholder="От"
+                />
+                <span>-</span>
+                <input class="search-box__input" type="text" placeholder="До" />
+              </div>
+            </div>
+
+            <div class="search-box__group search-box__group--btn">
+              <button class="search-box__btn btn" type="submit"></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabs-content">
+          <div class="search-box__wrapper">
+            <div class="search-box__group">
+              <label class="search-box__label" for="search-2">Поиск</label>
+              <input
+                class="search-box__input"
+                type="text"
+                id="search-2"
+                placeholder="Введите название"
+              />
+            </div>
+            <div class="search-box__group">
+              <label class="search-box__label" for="highway-2">Шоссе</label>
+              <select class="search-box__input select" id="highway-2">
+                <option value="">Все шоссе</option>
+                <option value="1">Почти все шоссе</option>
+                <option value="2">Не все шоссе</option>
+                <option value="3">Одно шоссе</option>
+              </select>
+            </div>
+            <div class="search-box__group">
+              <label class="search-box__label" for="district-2">Район МО</label>
+              <select class="search-box__input select" id="district-2">
+                <option value="">Все районы МО</option>
+                <option value="1">Почти все районы МО</option>
+                <option value="2">Не все районы МО</option>
+                <option value="3">Один район МО</option>
+              </select>
+            </div>
+            <div class="search-box__group search-box__group--distance">
+              <label class="search-box__label" for="from-2">Поиск</label>
+              <div class="search-box__inputs">
+                <input
+                  class="search-box__input"
+                  type="text"
+                  id="from-2"
+                  placeholder="От"
+                />
+                <span>-</span>
+                <input class="search-box__input" type="text" placeholder="До" />
+              </div>
+            </div>
+
+            <div class="search-box__group search-box__group--btn">
+              <button class="search-box__btn btn" type="submit"></button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

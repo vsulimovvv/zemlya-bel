@@ -1,0 +1,83 @@
+.numbers {
+  @include adaptive-value('padding-top', 50, 30, 1);
+  @include adaptive-value('padding-bottom', 50, 30, 1);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 400px));
+
+    @include adaptive-value('gap', 35, 15, 1);
+
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: minmax(auto, 320px);
+      justify-content: center;
+      gap: 30px;
+    }
+  }
+
+  &__number {
+    display: block;
+    @include fz40();
+    margin-bottom: 10px;
+    font-family: $Verdana;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #122541;
+    font-weight: 400;
+  }
+
+  &__item {
+    background-color: var(--color-bg);
+    border-radius: 10px;
+    width: 100%;
+    min-height: 155px;
+    position: relative;
+    @include adaptive-value('padding', 30, 20, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+
+    line-height: 1;
+    font-weight: 700;
+    color: #122541;
+
+    &--sold {
+      &::after {
+        @include backgroundImage(url('../images/content/plot.png'), contain);
+      }
+    }
+    &--safe {
+      &::after {
+        @include backgroundImage(url('../images/content/village.png'), contain);
+      }
+    }
+    &--successful {
+      &::after {
+        @include backgroundImage(url('../images/content/trophy.png'), contain);
+      }
+    }
+
+    &::before {
+      @include elDef();
+      width: 18px;
+      height: 18px;
+      background-color: #3b58c4;
+      left: 7px;
+      top: 7px;
+      border-radius: 5px;
+    }
+
+    &::after {
+      @include elDef();
+      width: 41px;
+      height: 41px;
+      bottom: 18px;
+      right: 18px;
+    }
+  }
+}

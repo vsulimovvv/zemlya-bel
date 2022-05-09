@@ -1,0 +1,136 @@
+.news {
+  @include adaptive-value('padding-top', 80, 40, 1);
+  @include adaptive-value('padding-bottom', 80, 40, 1);
+  background-color: var(--color-bg);
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 55px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 30px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__offer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+
+    @include breakpointsMaxW($bp-991) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    @include breakpointsMaxW($bp-576) {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    @include fz40();
+    @include square();
+    font-weight: 300;
+    color: #122541;
+    line-height: 1;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 335px));
+    gap: 25px;
+
+    @include breakpointsMaxW($bp-991) {
+      gap: 20px;
+    }
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, minmax(auto, 335px));
+      gap: 50px 30px;
+    }
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: minmax(auto, 335px);
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.news-card {
+  max-width: 335px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &:hover {
+    .news-card {
+      &__top {
+        img {
+          transform: scale(1.2);
+        }
+      }
+
+      &__title {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  &__top {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @include breakpointsMaxW($bp-container) {
+      height: calc(200px + (250 - 200) * ((100vw - 991px) / (1300 - 991)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      height: calc(200px + (250 - 200) * ((100vw - 375px) / (991 - 375)));
+    }
+
+    img {
+      transition: 450ms ease;
+      @include img(cover);
+      border-radius: 10px;
+    }
+  }
+
+  &__time {
+    margin-bottom: 15px;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 400;
+    color: #aab3c1;
+  }
+  &__title {
+    @include adaptive-value('font-size', 21, 18, 1);
+    line-height: 1.2;
+    font-weight: 700;
+    color: #122541;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+}

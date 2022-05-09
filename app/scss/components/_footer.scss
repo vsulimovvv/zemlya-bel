@@ -1,0 +1,110 @@
+.footer {
+  &__top {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 160px minmax(auto, 700px) auto;
+    justify-content: space-between;
+    gap: 30px;
+    border-bottom: 1px solid #cbcbcb;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, auto);
+      gap: 50px;
+    }
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  &__bottom {
+    color: #cbcbcb;
+    text-align: center;
+    padding: 20px 0;
+    line-height: 1.2;
+    font-size: 14px;
+  }
+
+  &__cols {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    gap: 30px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-column: 1/-1;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+      justify-self: end;
+    }
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  &__col {
+    &--contacts {
+      @include breakpointsMaxW($bp-991) {
+        grid-row: 1;
+        grid-column: 2/3;
+        justify-self: end;
+      }
+      @include breakpointsMaxW($bp-576) {
+        grid-row: initial;
+        grid-column: initial;
+        justify-self: start;
+      }
+    }
+  }
+
+  &__actions {
+    margin-bottom: 20px;
+  }
+
+
+
+
+  &__heading {
+    display: block;
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #2e3137;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__list {
+    display: grid;
+    gap: 10px;
+  }
+
+  &__link {
+    font-size: 18px;
+    font-weight: 400;
+    color: #8e939b;
+    transition: 200ms ease;
+    position: relative;
+
+    &::after {
+      @include elDef();
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: -3px;
+      background-color: var(--color-dark);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: 200ms ease;
+    }
+
+    &:hover {
+      color: var(--color-dark);
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

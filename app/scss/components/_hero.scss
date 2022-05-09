@@ -1,0 +1,261 @@
+.hero {
+  @include background(cover);
+  @include adaptive-value('padding-top', 200, 100, 1);
+  @include adaptive-value('padding-bottom', 75, 40, 1);
+
+  &__title {
+    color: var(--color-white);
+    @include adaptive-value('font-size', 50, 24, 1);
+    line-height: 1.2;
+    font-weight: 800;
+    text-align: center;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__search {
+    width: 100%;
+
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
+  &__top {
+    padding-bottom: 50px;
+    position: relative;
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+  }
+
+  &__arrow {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @include maskImage(url('../images/icons/chevron.svg'), contain);
+    background-color: var(--color-accent);
+  }
+
+  &__text {
+    color: var(--color-white);
+    text-align: center;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 500;
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+  }
+
+  &--construction {
+    .hero {
+      text-align: left;
+
+      &__wrapper {
+        background-color: var(--color-white);
+        display: flex;
+        justify-content: flex-end;
+        border-radius: 0px 30px 0px 0px;
+        width: max(15px, calc((100% - 300px) / 2));
+
+        @include breakpointsMaxW($bp-container) {
+          max-width: 480px;
+          width: 100%;
+          background-color: transparent;
+        }
+        @include breakpointsMaxW($bp-768) {
+          justify-content: center;
+        }
+      }
+
+      &__offer {
+        max-width: 480px;
+
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        color: var(--color-dark);
+        background-color: var(--color-white);
+        border-radius: 0px 30px 0px 0px;
+        padding: 50px;
+
+        @include breakpointsMaxW($bp-768) {
+          width: calc(100% - 30px);
+        }
+
+        @include adaptive-value('padding-right', 50, 20, 1);
+        @include adaptive-value('padding-left', 50, 20, 1);
+        @include adaptive-value('padding-top', 50, 30, 1);
+        @include adaptive-value('padding-bottom', 50, 30, 1);
+
+        @include breakpointsMaxW($bp-768) {
+          border-radius: 0px 15px 0px 0px;
+        }
+      }
+
+      &__title {
+        color: var(--color-dark);
+        margin-bottom: 20px;
+      }
+
+      &__text {
+        text-align: left;
+        line-height: 1.5;
+        color: #132134;
+        @include adaptive-value('font-size', 18, 16, 1);
+        margin-bottom: 30px;
+      }
+
+      &__btn {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.search-box {
+  &__top {
+    width: 100%;
+    z-index: 2;
+
+    &-list {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    &-btn {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+      border-radius: 10px 10px 0px 0px;
+      width: 165px;
+      height: 45px;
+      transition: 500ms ease;
+
+      @include breakpointsMaxW($bp-576) {
+        width: 150px;
+      }
+      @include breakpointsMaxW($bp-360) {
+        font-size: 14px;
+        width: 130px;
+      }
+
+      &.tabs-btn--active {
+        background-color: var(--color-white);
+        color: var(--color-dark);
+      }
+    }
+  }
+  &__wrapper {
+    z-index: 1;
+    display: grid;
+    grid-template-columns:
+      minmax(auto, 255px) minmax(auto, 200px) minmax(auto, 200px)
+      minmax(auto, 225px) auto;
+    gap: 15px;
+    padding: 40px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    @include adaptive-value('padding', 40, 20, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    @include breakpointsMaxW($bp-768) {
+      grid-column: span 2;
+    }
+
+    &--distance {
+      grid-column: initial;
+    }
+
+    &--btn {
+      @include breakpointsMaxW($bp-768) {
+        grid-row: 4;
+        grid-column: 2/-1;
+        justify-self: end;
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+  }
+
+  &__inputs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    gap: 10px;
+    @include breakpointsMaxW($bp-768) {
+      max-width: 300px;
+    }
+
+    .search-box__input {
+      text-align: center;
+      max-width: 100px;
+      width: 100%;
+      padding: 0;
+      padding: 10px;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #182f50;
+  }
+
+  &__input {
+    width: 100%;
+    background-color: var(--color-white);
+    border: 1px solid #d0d2d5;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1;
+    height: 50px;
+    padding: 18px 25px;
+
+    &::placeholder {
+      color: #969696;
+    }
+  }
+
+  &__btn {
+    width: 47px;
+    height: 47px;
+    border-radius: 5px;
+    background-color: var(--color-accent);
+    position: relative;
+    margin-top: auto;
+    padding: 0;
+
+    @include breakpointsMaxW($bp-576) {
+    }
+
+    &::after {
+      @include elDef();
+      width: 20px;
+      height: 20px;
+      @include maskImage(url('../images/icons/search.svg'), contain);
+      background-color: var(--color-white);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

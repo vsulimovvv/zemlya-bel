@@ -1,0 +1,30 @@
+.questions {
+  @include adaptive-value('padding-top', 80, 40, 1);
+  @include adaptive-value('padding-bottom', 80, 40, 1);
+  @include background(cover);
+
+  &__top {
+    text-align: center;
+    @include adaptive-value('margin-bottom', 40, 30, 1);
+  }
+
+  &__title {
+    @include fz50();
+    line-height: 1;
+    font-weight: 400;
+    color: #172437;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #5d6571;
+  }
+
+  &__wrapper {
+    max-width: 475px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
