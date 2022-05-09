@@ -1,0 +1,78 @@
+<section class="installment">
+  <div class="container">
+    <h2 class="installment__title">Рассрочка и кредит</h2>
+
+    <form class="form-calc">
+      <div class="form-calc__inner">
+        <div class="form-calc__left">
+          <div class="form-calc__group">
+            <label class="form-calc__label" for="cost">
+              Стоимость недвижимости
+            </label>
+            <input
+              id="cost"
+              class="form-calc__input"
+              type="text"
+              placeholder="Введите стоимость недвижимости"
+            />
+
+            <span class="form-calc__group-icon">₽</span>
+          </div>
+          <div class="form-calc__group">
+            <label class="form-calc__label" for="bid">Ставка</label>
+            <input
+              id="bid"
+              class="form-calc__input"
+              type="text"
+              placeholder="Введите стоимость недвижимости"
+            />
+            <span class="form-calc__group-icon">%</span>
+          </div>
+          <div class="form-calc__group">
+            <label class="form-calc__label" for="initial">
+              Первоначальный взнос
+            </label>
+            <input
+              id="initial"
+              class="form-calc__input"
+              type="text"
+              placeholder="Введите стоимость недвижимости"
+            />
+            <span class="form-calc__group-icon">₽</span>
+          </div>
+          <div class="form-calc__group">
+            <label class="form-calc__label"> Срок рассрочки / кредита </label>
+            <span class="form-calc__group-icon">мес</span>
+
+            <div class="range-slider">
+              <span class="range-slider__value"></span>
+              <div class="range-slider__range"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-calc__right">
+          <div class="form-calc__total form-calc__total--contract">
+            Цена договора
+            <strong>1 537 500 ₽</strong>
+          </div>
+          <div class="form-calc__total form-calc__total--overpayment">
+            Размер переплаты за рассрочку
+
+            <strong>37 500 ₽</strong>
+          </div>
+          <div class="form-calc__total form-calc__total--month">
+            Месячный платеж по рассрочке
+
+            <strong>157 500 ₽</strong>
+          </div>
+        </div>
+      </div>
+      <div class="form-calc__bottom">
+        <button class="form-calc__btn btn" type="submit">
+          ОТПРАВИТЬ ЗАЯВКУ
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

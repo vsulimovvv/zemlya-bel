@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @include('./components/base/_meta.html')
+    @include('./components/base/_links.html')
+
+    <title>Zemlya Bel</title>
+  </head>
+
+  <body>
+    @include('./components/popups/_popups.html')
+
+    <h1 class="visually-hidden">Карточка поселка</h1>
+
+    <div class="site-wrapper">
+      @include('./components/_header-menu-color-dark.html')
+
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#"> Все поселки </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link--active">
+                ИЖС Новая гвоздна
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="main">
+        @include('./components/_product.html')
+        @include('./components/_village-map.html')
+        @include('./components/_interactive.html')
+        @include('./components/_descr-village.html')
+        @include('./components/_news.html')
+        @include('./components/_questions.html')
+      </main>
+      @include('./components/_footer.html')
+    </div>
+
+    @include('./components/base/_scripts.html')
+  </body>
+</html>
